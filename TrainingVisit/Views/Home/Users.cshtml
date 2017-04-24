@@ -1,0 +1,24 @@
+﻿@model IEnumerable<TrainingVisit.Models.User>
+
+<table class="table">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="display:none">
+                @Html.DisplayFor(modelItem => item.idUser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameUser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserBirthdate)
+            </td>
+            <td>
+                <a href="#" onclick="return GetLatestTrainings(@item.idUser)">List</a>
+            </td>
+        </tr>
+    }
+</table>

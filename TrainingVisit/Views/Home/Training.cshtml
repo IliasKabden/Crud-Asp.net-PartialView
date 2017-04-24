@@ -1,0 +1,30 @@
+﻿@model IEnumerable<TrainingVisit.Models.Training>
+<table class="table">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="display:none">
+                @Html.DisplayFor(modelItem => item.idTraining)
+            </td>
+            <td>
+                <a href="#" onclick="return getByUser('@item.idTraining')">@Html.DisplayFor(modelItem => item.NameTraining)</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescrTraining)
+            </td>
+            <td>
+                <p data-placement="top" data-toggle="tooltip" title="" data-original-title="Edit">
+                    <button class="btn btn-primary btn-xs" onclick="return getbyID(@item.idTraining)" data-title="Edit" data-toggle="modal" data-target="#edit">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+                </p>
+                <p data-placement="top" data-toggle="tooltip" title="" data-original-title="Delete">
+                    <button class="btn btn-danger btn-xs" onclick="Delele(@item.idTraining)" data-title="Delete" data-toggle="modal" data-target="#delete">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </p>
+                @*<a href="#" onclick="return getbyID(@item.idTraining)">Edit</a> | <a href="#" onclick="Delele(@item.idTraining)">Delete</a>*@
+            </td>
+        </tr>
+    }
+</table>

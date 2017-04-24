@@ -1,0 +1,30 @@
+﻿@model IEnumerable<TrainingVisit.Models.User>
+
+<br />
+<h2>Get Latest Trainings </h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                NameUser
+            </th>
+            <th>
+                NameTraning
+            </th>
+        </tr>
+    </thead>
+    <tbody class="tbody" id="GetLatestTrainings"></tbody>
+</table>
+<table class="table">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameUser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameTrainig)
+            </td>
+        </tr>
+    }
+</table>
