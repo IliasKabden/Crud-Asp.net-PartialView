@@ -1,6 +1,6 @@
 # Crud-Asp.net-PartialView
 Asp.net Mvc
 
-Example Crud
+Admin Panel Template
 PartialView
 Modal BootS
