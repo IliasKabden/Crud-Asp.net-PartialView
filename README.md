@@ -1,6 +1,3 @@
-# Crud-Asp.net-PartialView
+# Admin Panel Template
 Asp.net Mvc
-
-Admin Panel Template
-PartialView
-Modal BootS
+CRUD
